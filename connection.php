@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "remotemysql.com";
+$username = "kjQ1QLBFTp";
+$password = "A4Podp4JmM";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=chat_app", $username, $password);
