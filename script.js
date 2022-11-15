@@ -1,32 +1,34 @@
-$('#composer').on('submit', function (e) {
+document.getElementById('composer').addEventListener('submit', function (e) {
     e.preventDefault()
 
-    let messageInput = $('#message-input');
+    let messageInput = document.getElementById('message-input');
     let body = new FormData();
-    body.append('message', messageInput.val());
+    body.append('message', messageInput.value);
 
     fetch('send.php', {
         method: 'POST',
         body: body
     })
-    messageInput.val('');
+    messageInput.value = '';
 })
-
 
 setInterval(() => {
     fetch('receive.php')
         .then(res => res.json())
         .then(data => {
-            let messagesWrapper = $('#messages');
+            let messagesWrapper = document.getElementById('messages-wrapper');
+            let bubble, messageId
+
             data.forEach(message => {
-                if (document.getElementById(message.id) == null) {
-                    let bubble = document.createElement('div')
+                messageId = `message-id-${message.id}`
+                if (document.getElementById(messageId) == null) {
+                    bubble = document.createElement('div')
                     bubble.classList.add('bubble')
+                    bubble.id = messageId
                     bubble.innerText = message.message;
-                    console.dir(bubble)
                     messagesWrapper.appendChild(bubble)
                 }
             });
         })
-}, 1000);
+}, 500);
 

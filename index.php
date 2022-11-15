@@ -36,11 +36,7 @@ if ($_SESSION['MESSAGE_REPORT']) {
 
 <body class="vw-100 vh-100 d-flex flex-column justify-content-center align-content-center">
     <div id="messages-wrapper" class="w-50">
-        <?php foreach ($messages as $key => $message) : ?>
-            <div class="bubble">
-                <?= $message['message'] ?>
-            </div>
-        <?php endforeach ?>
+        <!-- <div class="bubble">MESSAGE</div> -->
     </div>
 
     <form id="composer" action="send.php" method="POST">
