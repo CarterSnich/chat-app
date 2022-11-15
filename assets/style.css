@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	overflow: hidden;
+	padding-block: 3.25rem;
+	height: 100vh;
+	width: 100vw;
+}
+
+main {
+	margin-inline: auto;
+	width: min(468px, 100%);
+	height: 516px;
+	display: flex;
+	flex-direction: column;
+}
+
+#messages {
+	flex-grow: 1;
+	overflow-x: auto;
+}
+
+#messages-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	padding: 0.25rem;
+}
+
+#messages-wrapper > .bubble {
+	max-width: 70%;
+}
+
+#messages-wrapper > .bubble.left {
+	margin-right: auto;
+}
+
+#messages-wrapper > .bubble.right {
+	margin-left: auto;
+}
+
+#messages-wrapper > small {
+	font-size: 80%;
+	font-weight: 400;
+}
+
+#composer {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+#composer > textarea {
+	min-height: 96px;
+	height: 96px;
+}

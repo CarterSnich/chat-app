@@ -1,10 +1,11 @@
 <?php
+session_start();
+
 $servername = "remotemysql.com";
 $dbname = "kjQ1QLBFTp";
 $username = "kjQ1QLBFTp";
 $password = "A4Podp4JmM";
 $port = 3306;
-
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname;port=$port", $username, $password);
     // set the PDO error mode to exception
