@@ -16,6 +16,8 @@ setInterval(() => {
     fetch('receive.php')
         .then(res => res.json())
         .then(data => {
+            $('#spinner-wrapper').addClass('d-none')
+
             let messagesWrapper = $('#messages-wrapper');
             let bubble, par, small, messageId
             const username = $('meta[name=username]').attr('content')

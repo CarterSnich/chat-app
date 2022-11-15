@@ -22,6 +22,15 @@ main {
 #messages {
 	flex-grow: 1;
 	overflow-x: auto;
+	position: relative;
+}
+
+#messages > #spinner-wrapper {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-content: center;
 }
 
 #messages-wrapper {

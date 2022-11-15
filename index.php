@@ -39,7 +39,13 @@ if (!isset($_SESSION['user'])) {
     <main>
         <code><?= $_SESSION['user']['username'] . '@' . $_SESSION['user']['ip_address'] ?></code>
         <div id="messages">
-            <div id="messages-wrapper"></div>
+            <div id="spinner-wrapper">
+                <div id="spinner" class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div id="messages-wrapper">
+            </div>
         </div>
 
         <form id="composer" class="p-1 gap-1" action="send.php" method="POST">
