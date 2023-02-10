@@ -1,3 +1,5 @@
+> :warning: Heroku Free Tier is dead.
+
 # speedrun-chat-app
 
 a _very_ (the most, maybe) simple chat app that was made just for fun, currently hosted using heroku and you can view it [here](http://speedrun-chat-app.herokuapp.com/).
